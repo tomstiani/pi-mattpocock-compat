@@ -11,7 +11,10 @@ assert.equal(process.env.MATT_LIVE_CHATGPT, "1", "Explicit MATT_LIVE_CHATGPT=1 r
 const scenario = process.argv[2];
 assert.ok(["grill-with-docs", "research", "code-review", "implement-spec"].includes(scenario!));
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const upstream = process.env.MATT_UPSTREAM_CHECKOUT ?? "/tmp/pi-matt-skills-audit";
+assert.ok(process.env.MATT_UPSTREAM_CHECKOUT, "Set MATT_UPSTREAM_CHECKOUT to the pinned skills checkout");
+assert.ok(process.env.MATT_LIVE_MODEL, "Set MATT_LIVE_MODEL to an available openai-codex model ID");
+const upstream = resolve(process.env.MATT_UPSTREAM_CHECKOUT);
+const model = process.env.MATT_LIVE_MODEL;
 const resuming = process.env.MATT_LIVE_RESUME_DIR;
 const base = resuming ?? join(tmpdir(), `matt-live-${scenario}-${Date.now()}`);
 const repo = join(base, "repo"), agent = join(base, "agent");
@@ -21,7 +24,7 @@ for (const category of ["engineering", "productivity"]) for (const skill of read
 }
 const auth = join(root, "test/fixtures/chatgpt-auth.ts"), child = join(root, "extensions/child.ts");
 const roles = Object.fromEntries(["scout", "worker", "merger", "standards-reviewer", "spec-reviewer", "researcher"].map((role) => [`matt-compat.${role}`, {
-  model: "openai-codex/gpt-6.1-sol", thinking: "low", subagentOnlyExtensions: [child, auth, ...(role === "researcher" ? [join(root, "extensions/web.ts")] : [])],
+  model: `openai-codex/${model}`, thinking: "low", subagentOnlyExtensions: [child, auth, ...(role === "researcher" ? [join(root, "extensions/web.ts")] : [])],
 }]));
 writeFileSync(join(agent, "settings.json"), JSON.stringify({ packages: [root], subagents: { agentOverrides: roles } }));
 mkdirSync(join(agent, "extensions/subagent"), { recursive: true });
@@ -51,8 +54,8 @@ const prompts: Record<string, string> = {
   "implement-spec": "/skill:implement-spec Implement spec.md and both dependent tickets in tickets.json on integration. Use matt_worktree owned branches and workers (async:true, worktree:false where possible), native status and completion, reconcile-child after process proof, serialized matt-compat.merger children, and npm test validation after each merge. The second ticket must start after the first is integrated and validated, with dependsOn receipt IDs. Load code-review and perform captured independent final review against review-base using spec.md; address findings in a worker. Close local tracker tickets and commit their updates. Revalidate all worktrees on the final integration HEAD with npm test before planning/applying cleanup. Retain every branch. Report the final tested commit and unresolved findings. End ACCEPTANCE_COMPLETE only when all work and eligible cleanup are finished. This is a local fixture: no PR is configured or requested.",
 };
 const cli = join(dirname(fileURLToPath(import.meta.resolve("@earendil-works/pi-coding-agent"))), "bundle/cli.js");
-const args = [cli, ...(resuming ? ["--continue"] : []), "--mode", "rpc", "--no-extensions", "--no-prompt-templates", "--no-themes", "--extension", join(root, "extensions/index.ts"), "--extension", auth, "--extension", join(root, "node_modules/pi-subagents/index.js"), "--provider", "openai-codex", "--model", "gpt-6.1-sol", "--thinking", "low"];
-const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => ["PATH", "TMPDIR", "LANG", "LC_ALL", "TZ", "MATT_LIVE_CHATGPT"].includes(key)));
+const args = [cli, ...(resuming ? ["--continue"] : []), "--mode", "rpc", "--no-extensions", "--no-prompt-templates", "--no-themes", "--extension", join(root, "extensions/index.ts"), "--extension", auth, "--extension", join(root, "node_modules/pi-subagents/index.js"), "--provider", "openai-codex", "--model", model, "--thinking", "low"];
+const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => ["PATH", "TMPDIR", "TMP", "TEMP", "SYSTEMROOT", "HOME", "USERPROFILE", "LANG", "LC_ALL", "TZ", "MATT_LIVE_CHATGPT"].includes(key)));
 Object.assign(env, { PI_CODING_AGENT_DIR: agent, PI_OFFLINE: "1", PI_TELEMETRY: "off" });
 const processChild = spawn(process.execPath, args, { cwd: repo, env, stdio: ["pipe", "pipe", "pipe"] });
 let buffer = "", finished = false, round = 0, settled = false;
@@ -99,7 +102,7 @@ try {
     const check = spawnSync("npm", ["test"], { cwd: repo, encoding: "utf8" }); assert.equal(check.status, 0, check.stdout + check.stderr);
     assert.equal(git(["worktree", "list", "--porcelain"]).split("worktree ").length - 1, 1);
   }
-  const summary = { scenario, ok: true, model: "openai-codex/gpt-6.1-sol", upstream: "49dd158d1076134a641b33efb035946536778336", head: git(["rev-parse", "HEAD"]), directory: base, rounds: round, toolResults: toolResults.length };
+  const summary = { scenario, ok: true, model: `openai-codex/${model}`, upstream: "49dd158d1076134a641b33efb035946536778336", head: git(["rev-parse", "HEAD"]), directory: base, rounds: round, toolResults: toolResults.length };
   writeFileSync(join(base, "summary.json"), JSON.stringify(summary, null, 2) + "\n");
   console.log(JSON.stringify(summary));
 } finally { processChild.stdin.end(); await pause(300); if (processChild.exitCode === null) processChild.kill(); }
