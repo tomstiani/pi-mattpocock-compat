@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "packageVersion": "0.1.0-alpha.2",
+  "sourceCommit": null,
+  "sourceIdentity": "sha256 of source files; uncommitted local package",
+  "environment": {
+    "node": "26.10.0",
+    "pi": "1.0.3",
+    "pi-subagents": "0.78.0",
+    "typescript": "7.0.2",
+    "pi-web-access": "absent"
+  },
+  "upstreamRevision": "49dd158d1076134a641b33efb035946536778336",
+  "validation": {
+    "typecheck": "passed",
+    "tests": {
+      "passed": 22,
+      "failed": 0,
+      "skipped": 0,
+      "provider": "scripted local; actual Pi parent and foreground child loops"
+    },
+    "upstream": "revision and all 27 published skill contents match",
+    "packageDryRun": "passed with temporary npm cache"
+  },
+  "workflowAcceptance": "pending; no real-model execution",
+  "files": {
+    "agents/merger.md": "24b0531c0927c2e295ebd1ae364b3a13c6ad2c1a03a6889f38197a58af703d76",
+    "agents/researcher.md": "1ecd2f956875d2cafb860cf67ff030bcd8220694dc8b3bfdae4ea282a2516e54",
+    "agents/scout.md": "d40bb5323325880ff2ac3538967fbaf4aa46408c4481a4c8ea8670fd1772bbc0",
+    "agents/spec-reviewer.md": "17a6bba56b48123cf8bb904e6f183d349c5d7f7a9860ab8435d60b5299e3f6cb",
+    "agents/standards-reviewer.md": "90172893b8fcced3dc63feadb4bfb7fd2f6e06ab3a7ba9ff8304c9f9cb9353a2",
+    "agents/worker.md": "b8e42553c38c889777b1c38f33df2d4d4afa2b570cb7784c028bd5b053eb864d",
+    "compatibility.json": "4e006d5091d31aafa5371e746b0b24a9a7ca9db1a61dd234e5fad565d9a75e7f",
+    "extensions/child.ts": "916190d070bc9c61cc03bdd0673f6c482f9a3b203808ce29c77855c04744cc4f",
+    "extensions/index.ts": "9e97880a14e36b25ba015c604efb5f0652546ecb6b29ea10091eaac81fabe56a",
+    "extensions/web.ts": "abf9f9575112fc4798a272136512a0afc27f2ce53592d4ef7053b2ea2b9f5767",
+    "package-lock.json": "52ab167925e2b53c8a304e267c93bddc626bf07ff2dea03f55c52e0448844841",
+    "package.json": "68ae9a5b4dfcc76b954ca7805917c6f10b603a8cb7fabf08cb57c2b0a749ddea",
+    "scripts/check-upstream.ts": "2ea328b99679854262e4a84b55402592a87b95624e04a165d5a1a226eb2ba610",
+    "src/launch-extension.ts": "ba6b288a5a78ac5f2778fd50d0c566db82e873cf5659c008edac107340a30035",
+    "src/preflight.ts": "aa685fddef0b93f1d4f27d236fd42221878cdf2e8f401ef5d17d1582478f55f4",
+    "src/roles.ts": "4298bf09ec1842645c51dbac1668a1055f5458b0fdda1fd0a0b7562015396b2c",
+    "src/skill-extension.ts": "caf69e1d30826a3fc5da9a8a7206617fd3fa26bdfe168701f562e6f2edea182b",
+    "src/skills.ts": "3d722ebaabae71dba9a8a31bd689efa885cbccc439867566995363b9a8e39097",
+    "src/upstream.ts": "637643f6f8c783ffb533dd3cd6508f4c00087fcdad387b5e16074b0e0a2be278",
+    "test/fixtures/scripted-provider.ts": "f7d3de54aa7888ad8ac1370f2074ecf868d694b64b6991439da8d9a7feda8147",
+    "test/helpers/pi.ts": "bb2d88e44a0ba3484c231d31efe8779de9f761ab3cd03cc90374f0420193241b",
+    "test/pi-integration.test.ts": "26fbe7ca393126b30c306641b319ef3cfab1b61f98f7aee2633dfb61e170838a",
+    "test/preflight.test.ts": "261c8394b8e1d6593d77c3f5d25f1ee6a6e5f89dc9f08b2f16289f5686fe5395",
+    "test/skills.test.ts": "f871e63a2797cd0e120750357f6a481ef9b5c4f2b170d47520d2af6b19ca71f7",
+    "test/upstream.test.ts": "bc16d25fa0f7a9ec54a6b35df0981476884c2e52739a20032aba0af9dce1c3d7",
+    "tsconfig.json": "2aa871202dd724ccc0083ca49cce19fcc753e204dd4927e655fd5440c489feea",
+    "upstream.lock.json": "090d1019386db6527f8f54c9d7ebd1fca0893fde0afd9e99ff51ddbd160a2aeb"
+  }
+}

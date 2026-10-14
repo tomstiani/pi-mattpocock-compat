@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "99b01414-fb06-4774-87f9-8fbe7c668654",
+  "repo": "/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-implement-spec-1791977873159/repo",
+  "commonDir": "/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-implement-spec-1791977873159/repo/.git",
+  "path": "/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-implement-spec-1791977873159/repo/.pi/subagents/matt-compat/worktrees/99b01414-fb06-4774-87f9-8fbe7c668654",
+  "branch": "codex/matt-normalize-99b01414-fb06-4774-87f9-8fbe7c668654",
+  "integrationRef": "refs/heads/integration",
+  "baseCommit": "fe8ef5ba56439424ebc24192e84be336edb83e1e",
+  "ticket": "normalize",
+  "dependsOn": [],
+  "state": "removed",
+  "runHistory": [
+    "8323026a-6cc3-4268-83d3-3cf21529f7ab"
+  ],
+  "lastRun": {
+    "runId": "8323026a-6cc3-4268-83d3-3cf21529f7ab",
+    "native": {
+      "runId": "8323026a-6cc3-4268-83d3-3cf21529f7ab",
+      "asyncDir": "/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/pi-subagents-uid-501/async-subagent-runs/8323026a-6cc3-4268-83d3-3cf21529f7ab",
+      "runnerProcessInstanceId": "065b08eb-3685-4a94-8ac0-37547a205eb7",
+      "sessionFile": "/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-implement-spec-1791977873159/agent/sessions/--private-var-folders-28-dlxptn895632pkzn_7g03z7c0000gn-T-matt-live-implement-spec-1791977873159-repo--/2026-10-14T11-37-53-533Z_01a13a34-607d-7317-abf0-38fbac124f28/5d92d54b-0eb2-4da4-b7b2-be599af2a981/run-0/session.jsonl"
+    },
+    "success": true
+  },
+  "validation": {
+    "workerHead": "6c8c1f35aad432b6fe482ae6a4b0792bfd7bea0d",
+    "integrationHead": "6c8c1f35aad432b6fe482ae6a4b0792bfd7bea0d",
+    "ok": true,
+    "checks": [
+      {
+        "command": "npm",
+        "args": [
+          "test"
+        ],
+        "exitCode": 0,
+        "log": "/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-implement-spec-1791977873159/repo/.git/matt-compat/checks/99b01414-fb06-4774-87f9-8fbe7c668654-2162e3c9-29aa-4a55-b2ce-ec17ecd5ae50.log",
+        "sha256": "ab86b22539a0427baa131f7917e7759c3dcdd28919f539551fca31dbf9039e9f"
+      }
+    ]
+  },
+  "cleanupPlanId": "cad6b862-bdee-4e9b-85d6-d86eae732669"
+}

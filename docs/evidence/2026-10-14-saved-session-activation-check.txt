@@ -1,0 +1,11 @@
+✔ preflight cannot report ready when native subagent is registered but hidden from the parent (1413.025333ms)
+✔ eager startup exposes the launcher without a loader and respects host exclusions (2669.945583ms)
+✔ a parent session predating runtime installation reproduces both inactive tools and recovers without discarding history (2712.188625ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6921.513125

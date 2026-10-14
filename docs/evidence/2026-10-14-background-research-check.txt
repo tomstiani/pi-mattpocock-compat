@@ -1,0 +1,68 @@
+
+> pi-mattpocock-compat@0.1.0-alpha.4 check
+> npm run typecheck && npm test
+
+
+> pi-mattpocock-compat@0.1.0-alpha.4 typecheck
+> tsc --noEmit
+
+
+> pi-mattpocock-compat@0.1.0-alpha.4 test
+> node --test test/*.test.ts
+
+✔ real Pi explicitly loads a user-only root and resolves two nested skills (350.729417ms)
+✔ original upstream grill-with-docs loads its real model-invoked dependencies (332.265792ms)
+✔ real Pi rejects an automatic attempt to load the user-only root (307.940375ms)
+✔ read policy hooks block the Skill adapter in the actual Pi loop (315.561917ms)
+✔ preflight rejects an installed but inactive runtime (339.46025ms)
+✔ preflight resolves the packaged worker and its actual child Skill provider (1007.259875ms)
+✔ missing required skills fail preflight (799.815916ms)
+✔ a skill supplied only on the parent CLI cannot produce a false ready result (857.004417ms)
+✔ user-only skills cannot satisfy an automatic child's dependency (878.440292ms)
+✔ disabling repository instructions is reported before launch (960.708875ms)
+✔ a denied child tool fails preflight instead of widening the allowlist (1034.440375ms)
+✔ an actual foreground child receives repository context, its Skill tool, and a bounded allowlist (1145.986667ms)
+✔ research fails preflight when the child web provider is absent (868.199458ms)
+✔ direct dispatch cannot bypass the missing-skill preflight (911.834833ms)
+✔ per-call capability overrides cannot change a checked direct role (924.186708ms)
+✔ research preflight loads the pinned real web provider in the child (944.4215ms)
+✔ detached research loads its skill, saves cited fixture findings and notifies a usable parent (4688.571625ms)
+✔ failed detached research sends a failure notice and retains output diagnostics (4265.62575ms)
+✔ parent exit leaves detached research recoverable without claiming a completion wake (3503.786083ms)
+✔ research rejects unprepared dispatch (858.155917ms)
+✔ research rejects changed output dispatch (858.636083ms)
+✔ research rejects foreground override dispatch (878.359542ms)
+✔ research cannot prepare with a missing skill (868.7935ms)
+✔ the real web provider's internal-address rejection reaches the parent as research failure (4142.427875ms)
+✔ live public-page smoke with the pinned real web provider (4311.96325ms)
+✔ a second dispatch of the same prepared research is rejected while the first completes (4256.952666ms)
+✔ a denied request-receipt write prevents preparation and dispatch (822.771959ms)
+✔ research preparation rejects a notes directory outside the repository (826.819167ms)
+✔ independent parallel reviewers receive one committed snapshot and retain separate reports (1917.838208ms)
+✔ one failed review axis cannot become a successful aggregate (1673.064833ms)
+✔ explicit missing spec skips that axis without claiming a pass (1620.058209ms)
+✔ preparation rejects invalid revision before either child starts (1256.741542ms)
+✔ preparation rejects empty diff before either child starts (1044.528667ms)
+✔ preparation rejects unrecognized baseline before either child starts (1168.741375ms)
+✔ preparation rejects blocked native evidence read before either child starts (1178.512084ms)
+✔ preparation rejects blocked native Git command before either child starts (1062.358958ms)
+✔ preparation rejects truncated diff before either child starts (1027.87025ms)
+✔ review launch rejects overrides instead of changing captured child contracts (1157.670667ms)
+✔ a reviewer cancellation is surfaced as an incomplete failed review (1627.644458ms)
+✔ moving HEAD after capture cannot change either review target (1638.746083ms)
+✔ the original upstream code-review skill supplies the complete captured baseline (1147.046916ms)
+✔ loading preserves instructions, argument bytes, and the reference directory (2.60725ms)
+✔ a model cannot load a user-only skill, even when it is in the catalog (0.323042ms)
+✔ missing, ambiguous, and path-like names cannot trigger filesystem reads (0.096ms)
+✔ a policy change on disk is enforced without a reload (0.316875ms)
+✔ renamed, incomplete, and invalid skills fail instead of executing partial guidance (0.981ms)
+✔ metadata comes from Pi and relative catalog paths are rejected (0.068125ms)
+✔ upstream check detects reference changes, policy changes, additions, and removals (19.823833ms)
+ℹ tests 48
+ℹ suites 0
+ℹ pass 48
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30454.583875

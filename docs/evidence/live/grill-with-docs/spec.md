@@ -1,0 +1,1 @@
+Implement normalizeName(value): trim string input, return Guest for blank input, reject non-strings with TypeError. Then implement greet(value) using normalizeName and returning Hello, NAME!. Keep tests for both.

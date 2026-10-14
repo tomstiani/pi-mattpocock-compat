@@ -1,0 +1,104 @@
+
+> pi-mattpocock-compat@0.1.1 check
+> npm run typecheck && npm test
+
+
+> pi-mattpocock-compat@0.1.1 typecheck
+> tsc --noEmit
+
+
+> pi-mattpocock-compat@0.1.1 test
+> node --test test/*.test.ts
+
+✔ real Pi explicitly loads a user-only root and resolves two nested skills (391.31975ms)
+✔ original upstream grill-with-docs loads its real model-invoked dependencies (334.126084ms)
+✔ real Pi rejects an automatic attempt to load the user-only root (333.837375ms)
+✔ read policy hooks block the Skill adapter in the actual Pi loop (360.063833ms)
+✔ preflight rejects an installed but inactive runtime (353.620625ms)
+✔ preflight resolves the packaged worker and its actual child Skill provider (1250.954375ms)
+✔ preflight cannot report ready when native subagent is registered but hidden from the parent (1235.189208ms)
+✔ native loader activation makes the parent launcher ready without changing unrelated tools (1163.468ms)
+✔ eager startup exposes the launcher without a loader and respects host exclusions (3558.32575ms)
+✔ a parent session predating runtime installation reproduces both inactive tools and recovers without discarding history (3663.070583ms)
+✔ research preparation cannot hand back an unusable launch before native tool activation (1209.761208ms)
+✔ missing required skills fail preflight (1106.094083ms)
+✔ a skill supplied only on the parent CLI cannot produce a false ready result (1217.49525ms)
+✔ user-only skills cannot satisfy an automatic child's dependency (1260.449584ms)
+✔ disabling repository instructions is reported before launch (1276.537875ms)
+✔ compatibility roles cannot override the leaf-agent dispatch contract (1242.081209ms)
+✔ a denied child tool fails preflight instead of widening the allowlist (1267.208791ms)
+✔ an actual foreground child receives repository context, its Skill tool, and a bounded allowlist (1438.73125ms)
+✔ research fails preflight when the child web provider is absent (1155.702ms)
+✔ direct dispatch cannot bypass the missing-skill preflight (1136.811875ms)
+✔ per-call capability overrides cannot change a checked direct role (1150.781708ms)
+✔ research preflight loads the pinned real web provider in the child (1070.508083ms)
+✔ detached research loads its skill, saves cited fixture findings and notifies a usable parent (4924.170584ms)
+✔ failed detached research sends a failure notice and retains output diagnostics (4424.325417ms)
+✔ parent exit leaves detached research recoverable without claiming a completion wake (3945.751333ms)
+✔ research rejects unprepared dispatch (1189.420375ms)
+✔ research rejects changed output dispatch (1232.294208ms)
+✔ research rejects foreground override dispatch (1299.8965ms)
+✔ research cannot prepare with a missing skill (1252.885917ms)
+✔ the real web provider's internal-address rejection reaches the parent as research failure (4426.230167ms)
+﹣ live public-page smoke with the pinned real web provider (0.097833ms) # SKIP
+✔ a second dispatch of the same prepared research is rejected while the first completes (4476.217541ms)
+✔ a denied request-receipt write prevents preparation and dispatch (1068.586875ms)
+✔ research preparation rejects a notes directory outside the repository (1013.173ms)
+✔ independent parallel reviewers receive one committed snapshot and retain separate reports (2495.813916ms)
+✔ one failed review axis cannot become a successful aggregate (1969.952583ms)
+✔ explicit missing spec skips that axis without claiming a pass (1879.542083ms)
+✔ preparation rejects invalid revision before either child starts (1443.903208ms)
+✔ preparation rejects empty diff before either child starts (1244.876125ms)
+✔ preparation rejects unrecognized baseline before either child starts (1543.241166ms)
+✔ preparation rejects blocked native evidence read before either child starts (1558.309625ms)
+✔ preparation rejects blocked native Git command before either child starts (1271.658833ms)
+✔ preparation rejects truncated diff before either child starts (1499.392166ms)
+✔ review launch rejects overrides instead of changing captured child contracts (1647.711084ms)
+✔ a reviewer cancellation is surfaced as an incomplete failed review (2112.638375ms)
+✔ moving HEAD after capture cannot change either review target (2238.631792ms)
+✔ the original upstream code-review skill supplies the complete captured baseline (1504.910417ms)
+✔ loading preserves instructions, argument bytes, and the reference directory (2.653292ms)
+✔ a model cannot load a user-only skill, even when it is in the catalog (0.360375ms)
+✔ missing, ambiguous, and path-like names cannot trigger filesystem reads (0.110917ms)
+✔ a policy change on disk is enforced without a reload (0.327958ms)
+✔ renamed, incomplete, and invalid skills fail instead of executing partial guidance (0.98175ms)
+✔ metadata comes from Pi and relative catalog paths are rejected (0.068583ms)
+✔ upstream check detects reference changes, policy changes, additions, and removals (25.580084ms)
+✔ actual Pi workers and serialized mergers implement dependent tickets on owned bases (12088.648042ms)
+✔ a failed real Pi worker preserves partial files and blocks cleanup (4781.31425ms)
+✔ native bash policy can deny all worktree Git mutations (1411.880083ms)
+✔ an owned worker requires an explicit lifecycle mode (3104.392292ms)
+✔ background owned workers retain leases until native process proof and resume on the same worktree (8323.103417ms)
+✔ interrupted binding can be recovered only from exact native identity and observed process proof (4315.835917ms)
+✔ integration merger leases serialize native writers and retain uncertain ownership (2885.904417ms)
+✔ parent review evidence does not invalidate otherwise clean integration checks (2180.046916ms)
+✔ dependent tickets allocate from the validated integration tip, and eligible cleanup retains branches (4812.448375ms)
+✔ concurrent ticket worktrees have independent branches and writers (2296.081416ms)
+✔ cleanup refuses dirty work even after merge and validation (2403.277541ms)
+✔ cleanup refuses untracked work even after merge and validation (2378.039084ms)
+✔ cleanup refuses ignored work even after merge and validation (2257.264542ms)
+✔ cleanup refuses staged-cancelled work even after merge and validation (2221.706708ms)
+✔ failed integration checks retain logs and block cleanup and dependent tickets (2070.146583ms)
+✔ a check that changes HEAD cannot produce a passing validation receipt (1808.317667ms)
+✔ a merge conflict preserves both branches and unfinished integration state (1802.236167ms)
+✔ cleanup revalidates changed heads and new dirty files after a saved plan (2037.009125ms)
+✔ active and uncertain leases preserve work and reject another writer (2446.104333ms)
+✔ unknown worktree paths and forged ownership are rejected (664.028792ms)
+✔ stale lock ownership is reported without automatically removing a lock (601.50325ms)
+✔ interrupted cleanup reconciles only an absent path and absent Git registration (1843.604667ms)
+✔ cleanup refuses missing log after a valid receipt (1744.356625ms)
+✔ cleanup refuses tampered log after a valid receipt (1785.291417ms)
+✔ cleanup refuses moved integration after a valid receipt (1855.34475ms)
+✔ cleanup refuses Git lock after a valid receipt (1723.277542ms)
+✔ a new writer lease invalidates an already-reviewed cleanup plan (1762.808083ms)
+✔ explicit lock recovery requires the exact token and a provably exited owner (1437.806875ms)
+✔ two live writers can write the same relative path concurrently without overwriting each other (1492.104667ms)
+✔ ignored build artifacts permit integration validation but still prevent cleanup (1926.058ms)
+ℹ tests 84
+ℹ suites 0
+ℹ pass 83
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 52911.24425

@@ -1,0 +1,55 @@
+
+> pi-mattpocock-compat@0.1.0-alpha.3 check
+> npm run typecheck && npm test
+
+
+> pi-mattpocock-compat@0.1.0-alpha.3 typecheck
+> tsc --noEmit
+
+
+> pi-mattpocock-compat@0.1.0-alpha.3 test
+> node --test test/*.test.ts
+
+✔ real Pi explicitly loads a user-only root and resolves two nested skills (424.460708ms)
+✔ original upstream grill-with-docs loads its real model-invoked dependencies (333.130334ms)
+✔ real Pi rejects an automatic attempt to load the user-only root (289.063833ms)
+✔ read policy hooks block the Skill adapter in the actual Pi loop (304.965625ms)
+✔ preflight rejects an installed but inactive runtime (405.044125ms)
+✔ preflight resolves the packaged worker and its actual child Skill provider (918.032ms)
+✔ missing required skills fail preflight (886.634083ms)
+✔ a skill supplied only on the parent CLI cannot produce a false ready result (850.582375ms)
+✔ user-only skills cannot satisfy an automatic child's dependency (909.343833ms)
+✔ disabling repository instructions is reported before launch (887.249166ms)
+✔ a denied child tool fails preflight instead of widening the allowlist (894.027875ms)
+✔ an actual foreground child receives repository context, its Skill tool, and a bounded allowlist (1124.400584ms)
+✔ research fails preflight when the child web provider is absent (948.055166ms)
+✔ direct dispatch cannot bypass the missing-skill preflight (880.935833ms)
+✔ per-call capability overrides cannot change a checked direct role (903.124917ms)
+✔ independent parallel reviewers receive one committed snapshot and retain separate reports (2014.370792ms)
+✔ one failed review axis cannot become a successful aggregate (1749.065542ms)
+✔ explicit missing spec skips that axis without claiming a pass (1557.527041ms)
+✔ preparation rejects invalid revision before either child starts (1121.885167ms)
+✔ preparation rejects empty diff before either child starts (1109.044791ms)
+✔ preparation rejects unrecognized baseline before either child starts (1211.774083ms)
+✔ preparation rejects blocked native evidence read before either child starts (1179.211541ms)
+✔ preparation rejects blocked native Git command before either child starts (1136.089583ms)
+✔ preparation rejects truncated diff before either child starts (1105.454375ms)
+✔ review launch rejects overrides instead of changing captured child contracts (1172.705542ms)
+✔ a reviewer cancellation is surfaced as an incomplete failed review (1756.41575ms)
+✔ moving HEAD after capture cannot change either review target (1889.575708ms)
+✔ the original upstream code-review skill supplies the complete captured baseline (1180.512542ms)
+✔ loading preserves instructions, argument bytes, and the reference directory (2.713708ms)
+✔ a model cannot load a user-only skill, even when it is in the catalog (0.361375ms)
+✔ missing, ambiguous, and path-like names cannot trigger filesystem reads (0.116458ms)
+✔ a policy change on disk is enforced without a reload (0.363292ms)
+✔ renamed, incomplete, and invalid skills fail instead of executing partial guidance (1.040458ms)
+✔ metadata comes from Pi and relative catalog paths are rejected (0.077541ms)
+✔ upstream check detects reference changes, policy changes, additions, and removals (20.239625ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18329.204

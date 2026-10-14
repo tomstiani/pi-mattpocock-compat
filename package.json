@@ -1,0 +1,67 @@
+{
+  "name": "pi-mattpocock-compat",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "description": "Compatibility adapters for Matt Pocock's original skills in Pi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "extensions",
+    "agents",
+    "src",
+    "scripts",
+    "docs",
+    "compatibility.json",
+    "upstream.lock.json",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ],
+    "subagents": {
+      "agents": [
+        "./agents"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test",
+    "check:upstream": "node scripts/check-upstream.ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.3",
+    "pi-subagents": "0.78.0",
+    "pi-web-access": "0.40.0",
+    "typebox": "1.3.27"
+  },
+  "peerDependenciesMeta": {
+    "pi-subagents": {
+      "optional": true
+    },
+    "pi-web-access": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.3",
+    "@types/node": "26.6.5",
+    "pi-subagents": "0.78.0",
+    "pi-web-access": "0.40.0",
+    "typescript": "7.0.2"
+  },
+  "overrides": {
+    "@earendil-works/pi-ai": "1.0.3",
+    "@earendil-works/pi-agent-core": "1.0.3",
+    "@earendil-works/pi-tui": "1.0.3",
+    "@earendil-works/pi-mcp": "1.0.3",
+    "@earendil-works/pi-codemode": "1.0.3"
+  }
+}

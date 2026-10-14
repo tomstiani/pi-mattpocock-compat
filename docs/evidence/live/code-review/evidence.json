@@ -1,0 +1,112 @@
+{
+  "scenario": "code-review",
+  "ok": true,
+  "model": "openai-codex/gpt-6.1-sol",
+  "upstream": "49dd158d1076134a641b33efb035946536778336",
+  "head": "a2c419e81d9256edda4770c18a293f7f6c5e9c79",
+  "directory": "/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-code-review-1791977770389",
+  "rounds": 0,
+  "toolResults": [
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    },
+    {
+      "tool": "write",
+      "isError": false
+    },
+    {
+      "tool": "matt_review_prepare",
+      "isError": false
+    },
+    {
+      "tool": "subagents_enable",
+      "isError": false
+    },
+    {
+      "tool": "subagent",
+      "isError": false
+    },
+    {
+      "tool": "bash",
+      "isError": false
+    }
+  ],
+  "rawConversationSha256": "51c9ea3e12ae4850f124145ccada63463369d0f589a91bde06fd78be6509e881",
+  "nativeRuns": [],
+  "reports": [
+    {
+      "agent": "matt-compat.standards-reviewer",
+      "model": "openai-codex/gpt-6.1-sol:low",
+      "context": "fresh",
+      "output": "## Standards\n\n**No documented-standard violations or actionable baseline smells found in the captured diff.**\n\n- `src/greet.js:1` and `src/name.js:1` use ESM and small public functions, consistent with `CONTRIBUTING.md`.\n- `test/name.test.js:1` tests observable greeting behavior using `node:test` and `node:assert/strict`, consistent with `CONTRIBUTING.md` and the Node built-in runner rule in `AGENTS.md`.\n- No external dependencies appear in the diff.\n- No **Middle Man** finding: `greet` adds greeting formatting rather than merely forwarding calls. The repository also explicitly endorses small public functions.\n\n**Review limitations, not findings:** The captured evidence cannot establish compliance with ticket closure, worktree allocation, or integration procedures in `AGENTS.md`. Untested blank-input and non-string branches are residual coverage risks, not violations of a documented coverage requirement.\n\nCompleted Standards review of `13e8c08…a2c419e`; this is not approval.",
+      "launchContractDigest": "8a5df50c24668e54eaed4a8a2c2958aa1a15a65782445eb678e6dce980900f9f"
+    },
+    {
+      "agent": "matt-compat.spec-reviewer",
+      "model": "openai-codex/gpt-6.1-sol:low",
+      "context": "fresh",
+      "output": "## Spec\n\n**Finding — partial test requirement:** `spec.md` requires **“Keep tests for both.”** In the pinned diff, `test/name.test.js:1` imports only `greet` and asserts `greet(' Ada ') === 'Hello, Ada!'`. This indirectly exercises trimming, but supplies no dedicated `normalizeName` tests and no assertions for blank-input fallback or non-string rejection. Add tests covering both functions, including those normalization cases.\n\n**Implementation:** `src/name.js:1` implements trimming, `Guest` fallback, and `TypeError` rejection as specified. `src/greet.js:1` delegates to `normalizeName` and returns the requested greeting. No incorrect implementation or extra scope is apparent.\n\n**Review limitation:** This is static review of the supplied committed evidence only; tests were not run, and existing unchanged tests are not shown. Review completion is not approval.",
+      "launchContractDigest": "8f028eecde37d2b47e7000aafe53845d107f0fa84966d84d6e03a1e669a6eda5"
+    }
+  ],
+  "finalMessages": [
+    "Tested HEAD: `a2c419e81d9256edda4770c18a293f7f6c5e9c79` on `integration`, compared with `review-base`.\n\nCaptured evidence prepared; returned launch executed unchanged. Both independent reports completed. `node --test`: **1 passed, 0 failed**. No code changed.\n\n## Standards\n\nNo documented-standard violations or actionable baseline smells found. Changes use ESM, small public functions, Node built-ins, and no external dependencies.\n\nLimitation: captured evidence does not establish ticket/worktree/integration workflow compliance.\n\n## Spec\n\n**1 unresolved finding — incomplete tests**, `test/name.test.js:1`.\n\n`spec.md` requires **“Keep tests for both.”** The test covers only `greet(' Ada ')`; dedicated `normalizeName` tests and blank-input/non-string assertions are missing from the captured diff.\n\nImplementation otherwise matches the spec; no incorrect behavior or scope creep identified. Passing the existing test does not resolve the coverage finding.\n\n**Summary:** Standards: 0 findings, no worst issue. Spec: 1 unresolved finding, incomplete required tests. Review completion is not approval.\n\nACCEPTANCE_COMPLETE"
+  ]
+}

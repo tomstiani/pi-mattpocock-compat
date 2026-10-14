@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "packageVersion": "0.1.0-alpha.4",
+  "sourceCommit": null,
+  "sourceIdentity": "sha256 snapshot of local uncommitted package",
+  "environment": {
+    "node": "26.10.0",
+    "typescript": "7.0.2",
+    "pi": "1.0.3",
+    "pi-subagents": "0.78.0",
+    "pi-web-access": "0.40.0"
+  },
+  "upstreamRevision": "49dd158d1076134a641b33efb035946536778336",
+  "requirements": [
+    "R5 implemented; real-model acceptance pending",
+    "R3/R8-R10 portions"
+  ],
+  "validation": {
+    "command": "MATT_UPSTREAM_CHECKOUT=/tmp/pi-matt-skills-audit MATT_LIVE_WEB_SMOKE=1 npm run check",
+    "typecheck": "passed",
+    "tests": {
+      "passed": 48,
+      "failed": 0,
+      "skipped": 0,
+      "newResearchAndPreflightTests": 13,
+      "models": "scripted local providers; actual Pi RPC parent and detached child processes",
+      "web": "offline lifecycle fixture; real provider registration and internal-address rejection; real public-page fetch of https://example.com"
+    },
+    "upstream": "exact pinned revision and all 27 published skill contents match",
+    "packageDryRun": {
+      "status": "passed",
+      "version": "0.1.0-alpha.4",
+      "entryCount": 34,
+      "includes": "research adapter and child web bridge; test fixtures excluded"
+    }
+  },
+  "firstVersionAcceptance": "pending: worktrees, integration, recovery, safe cleanup, dependent tickets and real-model cases",
+  "files": {
+    "README.md": "d671d0bf15549b4880be7566a30c1aa2c30a7c6b266b113bfb9d58d7fa1d70cf",
+    "THIRD_PARTY_NOTICES.md": "a92946b0b2c6d440560f44b067def53e65613c6099fcb07b91b57373657b61cd",
+    "agents/merger.md": "24b0531c0927c2e295ebd1ae364b3a13c6ad2c1a03a6889f38197a58af703d76",
+    "agents/researcher.md": "1ecd2f956875d2cafb860cf67ff030bcd8220694dc8b3bfdae4ea282a2516e54",
+    "agents/scout.md": "d40bb5323325880ff2ac3538967fbaf4aa46408c4481a4c8ea8670fd1772bbc0",
+    "agents/spec-reviewer.md": "17a6bba56b48123cf8bb904e6f183d349c5d7f7a9860ab8435d60b5299e3f6cb",
+    "agents/standards-reviewer.md": "90172893b8fcced3dc63feadb4bfb7fd2f6e06ab3a7ba9ff8304c9f9cb9353a2",
+    "agents/worker.md": "b8e42553c38c889777b1c38f33df2d4d4afa2b570cb7784c028bd5b053eb864d",
+    "compatibility.json": "e71f5f0b857fe96f08caa10881eccd83ac613778a542626f266d9155540afcc0",
+    "docs/evidence/2026-10-14-background-research-check.txt": "8a6fb3a1d714d58f7ed22c4ffd4141c2fdeae6fd71dc11866eba1a9d2085c659",
+    "docs/evidence/2026-10-14-background-research.md": "8d222f80160a33507aa185812a1e1fe4feb79b5f19573d40551e480f83d51629",
+    "docs/project-plan.md": "5f361b084be413b339b7cce4e37b36fca5869aac75c52d308f44ca85e9b0972d",
+    "extensions/child.ts": "916190d070bc9c61cc03bdd0673f6c482f9a3b203808ce29c77855c04744cc4f",
+    "extensions/index.ts": "0120257d5816746163938f45b76d66a55b55025adcdb365fcf0122be63214ee7",
+    "extensions/web.ts": "312473ce50ee1575e9e49b17e30790a2d14e8c241f891ac31ce9dcd911f52445",
+    "package-lock.json": "42c8619583563c80d679485f0cb4537071b8a7224890237779a1b80d68ac6ffb",
+    "package.json": "f64684cd75fe69921124dc0911c3763aeb858a10a5d1d031ed63e3be1ab54f9e",
+    "scripts/check-upstream.ts": "2ea328b99679854262e4a84b55402592a87b95624e04a165d5a1a226eb2ba610",
+    "src/launch-extension.ts": "197e381d40d059e7f10029936215211571aa3da4da2385bd45917432c7df6f64",
+    "src/preflight.ts": "aa685fddef0b93f1d4f27d236fd42221878cdf2e8f401ef5d17d1582478f55f4",
+    "src/research.ts": "09b84960bcc47c22986d7f3104a15d3cd44c2a56275a18267b84ec6b77bd649f",
+    "src/review.ts": "6b459d63bdd28efac86475f63f479e2030aef8ac86dc0c1fb3cbc3203d39cd0a",
+    "src/roles.ts": "4298bf09ec1842645c51dbac1668a1055f5458b0fdda1fd0a0b7562015396b2c",
+    "src/skill-extension.ts": "5b2ffcb0ed1636f7d32626de20517e9e041053d9c31e85527774964c861945ab",
+    "src/skills.ts": "3d722ebaabae71dba9a8a31bd689efa885cbccc439867566995363b9a8e39097",
+    "src/upstream.ts": "637643f6f8c783ffb533dd3cd6508f4c00087fcdad387b5e16074b0e0a2be278",
+    "test/fixtures/offline-web.ts": "e0c2566dff3eb5aa98127a41859fb4be23ea95436ede3fdd485e7e2c02c42404",
+    "test/fixtures/research-provider.ts": "b2fa20cd1fc5836cff19126088fa70e7349a42301a387ac5ab594ad9828c413e",
+    "test/fixtures/scripted-provider.ts": "affe728c75cabec3cee6eed3bb1a2a3a78009283282c6440d96405df3f5d4a88",
+    "test/helpers/pi.ts": "f43fc9a945e7f1d82deb9dd239c8b2023cb36bac756a2e89a55317e4da625b55",
+    "test/pi-integration.test.ts": "26fbe7ca393126b30c306641b319ef3cfab1b61f98f7aee2633dfb61e170838a",
+    "test/preflight.test.ts": "69c6289a9ac186cc06ca0fc0918672f884da6af92e21e5367bb785da84229662",
+    "test/research.test.ts": "301b31bb0405648166eef0d31ecd504fd2274a26053edb6758ae24d646544343",
+    "test/review.test.ts": "79a0570f7ecd9009205e585fcb160a076b1cb471e9b58e2ab59d222c727055da",
+    "test/skills.test.ts": "f871e63a2797cd0e120750357f6a481ef9b5c4f2b170d47520d2af6b19ca71f7",
+    "test/upstream.test.ts": "bc16d25fa0f7a9ec54a6b35df0981476884c2e52739a20032aba0af9dce1c3d7",
+    "tsconfig.json": "2aa871202dd724ccc0083ca49cce19fcc753e204dd4927e655fd5440c489feea",
+    "upstream.lock.json": "090d1019386db6527f8f54c9d7ebd1fca0893fde0afd9e99ff51ddbd160a2aeb"
+  }
+}

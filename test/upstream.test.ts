@@ -1,0 +1,30 @@
+import assert from "node:assert/strict";
+import { mkdtemp, mkdir, rm, symlink, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { test } from "node:test";
+import { compareUpstream, snapshotUpstream } from "../src/upstream.ts";
+
+test("upstream check detects reference changes, policy changes, additions, and removals", async (t) => {
+  const root = await mkdtemp(join(tmpdir(), "matt-upstream-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  await mkdir(join(root, ".claude-plugin"));
+  const manifest = join(root, ".claude-plugin/plugin.json");
+  await writeFile(manifest, JSON.stringify({ skills: ["./skills/tdd"] }));
+  const folder = join(root, "skills/tdd");
+  await mkdir(folder, { recursive: true });
+  const content = "---\nname: tdd\ndescription: Testing\n---\nRead reference.md\n";
+  await writeFile(join(folder, "SKILL.md"), content);
+  await writeFile(join(folder, "reference.md"), "Original reference");
+  const baseline = await snapshotUpstream(root);
+  assert.deepEqual(compareUpstream(baseline, baseline), { added: [], removed: [], changed: [], invocationChanged: [] });
+  await writeFile(join(folder, "reference.md"), "Changed reference");
+  assert.deepEqual(compareUpstream(baseline, await snapshotUpstream(root)).changed, ["tdd"]);
+  await writeFile(join(folder, "SKILL.md"), content.replace("description: Testing", "description: Testing\ndisable-model-invocation: true"));
+  assert.deepEqual(compareUpstream(baseline, await snapshotUpstream(root)).invocationChanged, ["tdd"]);
+  const empty = { skills: {} };
+  assert.deepEqual(compareUpstream(empty, baseline).added, ["tdd"]);
+  assert.deepEqual(compareUpstream(baseline, empty).removed, ["tdd"]);
+  await symlink(join(root, ".claude-plugin"), join(folder, "external"));
+  await assert.rejects(snapshotUpstream(root), /does not follow symlinks/);
+});

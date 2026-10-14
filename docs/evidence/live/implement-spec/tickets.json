@@ -1,0 +1,16 @@
+[
+  {
+    "id": "normalize",
+    "dependsOn": [],
+    "state": "closed",
+    "description": "Implement src/name.js normalizeName with behavior tests."
+  },
+  {
+    "id": "greet",
+    "dependsOn": [
+      "normalize"
+    ],
+    "state": "closed",
+    "description": "Implement src/greet.js greet using normalizeName with behavior tests."
+  }
+]

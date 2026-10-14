@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-14",
+  "package": "pi-mattpocock-compat",
+  "version": "0.1.0-alpha.1",
+  "node": "v26.10.0",
+  "pi": "1.0.3",
+  "upstream": {
+    "publishedSkills": 27,
+    "revisionMatches": true,
+    "contentMatches": true
+  },
+  "requirements": [
+    "R1",
+    "R2",
+    "R8 (skill reads)",
+    "R9 (upstream inventory)",
+    "R10 (metadata attribution)"
+  ],
+  "typecheck": "passed",
+  "tests": {
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "provider": "scripted-local",
+    "externalModelCalls": 0
+  },
+  "packageAssembly": "passed",
+  "workflowAcceptance": "pending",
+  "sha256": {
+    "package.json": "ca46cc5c5139ecf14be5a4589653594ef77ae0d0641e3c2fcdb5d02cddd2ec45",
+    "package-lock.json": "dfda1f325ff0a4df2d81ad22fd812b54ce974997e804c90d5ef9f003f478ab70",
+    "tsconfig.json": "2aa871202dd724ccc0083ca49cce19fcc753e204dd4927e655fd5440c489feea",
+    "compatibility.json": "59111fb76eaac45ae17189748b73650fe50d312ba777897c56313300bf9aeee9",
+    "upstream.lock.json": "090d1019386db6527f8f54c9d7ebd1fca0893fde0afd9e99ff51ddbd160a2aeb",
+    "extensions/index.ts": "7c631cc5689aa11f6d0af5edadf1d04337b160e340079634e80227693cc598ae",
+    "src/skills.ts": "3d722ebaabae71dba9a8a31bd689efa885cbccc439867566995363b9a8e39097",
+    "src/upstream.ts": "637643f6f8c783ffb533dd3cd6508f4c00087fcdad387b5e16074b0e0a2be278",
+    "scripts/check-upstream.ts": "2ea328b99679854262e4a84b55402592a87b95624e04a165d5a1a226eb2ba610",
+    "test/skills.test.ts": "f871e63a2797cd0e120750357f6a481ef9b5c4f2b170d47520d2af6b19ca71f7",
+    "test/upstream.test.ts": "bc16d25fa0f7a9ec54a6b35df0981476884c2e52739a20032aba0af9dce1c3d7",
+    "test/pi-integration.test.ts": "4359243df9015d9ae8fcbe718341cdf3c509b982f730e867340e469a053a6230",
+    "test/fixtures/scripted-provider.ts": "ba2ada4b71a1eb67156b7d63635820076d8aa4db8af0fb7dc008a078fd3c5b38"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "packageVersion": "0.1.0-alpha.5",
+  "sourceCommit": null,
+  "sourceIdentity": "sha256 snapshot of uncommitted local package",
+  "environment": {
+    "node": "26.10.0",
+    "typescript": "7.0.2",
+    "pi": "1.0.3",
+    "pi-subagents": "0.78.0",
+    "pi-web-access": "0.40.0"
+  },
+  "upstreamRevision": "49dd158d1076134a641b33efb035946536778336",
+  "requirements": [
+    "R6 foreground lifecycle implemented; background/resume recovery pending",
+    "R7 commit-bound integration checks implemented; full workflow acceptance pending",
+    "R3/R8-R10 portions"
+  ],
+  "validation": {
+    "command": "MATT_UPSTREAM_CHECKOUT=/tmp/pi-matt-skills-audit npm run check",
+    "typecheck": "passed; repeated after status-message update",
+    "tests": {
+      "total": 74,
+      "passed": 73,
+      "failed": 0,
+      "skipped": 1,
+      "skipReason": "opt-in public-page smoke; previously passed in alpha.4",
+      "newWorktreeTests": 26,
+      "models": "scripted providers in actual native Pi foreground child sessions",
+      "git": "disposable repositories; actual dependent-ticket commits and merges; simultaneously running isolated writers"
+    },
+    "upstream": "pinned revision and all 27 published skill contents match",
+    "packageDryRun": {
+      "status": "passed",
+      "version": "0.1.0-alpha.5",
+      "entryCount": 40,
+      "includes": "worktree ownership module, extension and finite CLI helper; test fixtures excluded"
+    }
+  },
+  "pending": [
+    "background worktree leases",
+    "detached/interrupted/resumed child recovery",
+    "complete original-workflow and real-model acceptance"
+  ],
+  "files": {
+    "README.md": "9ee99f2c214afb45803818a085ee8c5036cefa7b7932879a01b5ec4571798703",
+    "THIRD_PARTY_NOTICES.md": "d2b9df7460c85c8d92b379bf9f837171e00cac1599a87aae4ad195fa1d2bd287",
+    "agents/merger.md": "24b0531c0927c2e295ebd1ae364b3a13c6ad2c1a03a6889f38197a58af703d76",
+    "agents/researcher.md": "1ecd2f956875d2cafb860cf67ff030bcd8220694dc8b3bfdae4ea282a2516e54",
+    "agents/scout.md": "d40bb5323325880ff2ac3538967fbaf4aa46408c4481a4c8ea8670fd1772bbc0",
+    "agents/spec-reviewer.md": "17a6bba56b48123cf8bb904e6f183d349c5d7f7a9860ab8435d60b5299e3f6cb",
+    "agents/standards-reviewer.md": "90172893b8fcced3dc63feadb4bfb7fd2f6e06ab3a7ba9ff8304c9f9cb9353a2",
+    "agents/worker.md": "b8e42553c38c889777b1c38f33df2d4d4afa2b570cb7784c028bd5b053eb864d",
+    "compatibility.json": "6e201301554daebedbdbb59dd77f44ce4dc0cda355342a2e402a2e54d894a046",
+    "docs/evidence/2026-10-14-worktree-lifecycle-check.txt": "d01c3540af16cddd57a734f823405feee3588de5e2474de06486cfc998c7424e",
+    "docs/evidence/2026-10-14-worktree-lifecycle.md": "5e8ec550c11d29174c3d8c565109e52063f01692fd2166f884ff9bfb72b36a21",
+    "docs/project-plan.md": "7211a201142c943963be9064183d37669792c61c9fd31255b9c1846037b82aac",
+    "extensions/child.ts": "916190d070bc9c61cc03bdd0673f6c482f9a3b203808ce29c77855c04744cc4f",
+    "extensions/index.ts": "266e068c820e9c40a9b83250760bd6556b72397cda9b08190a5fc6590051bfb2",
+    "extensions/web.ts": "312473ce50ee1575e9e49b17e30790a2d14e8c241f891ac31ce9dcd911f52445",
+    "package-lock.json": "b49e01374e4f1e0d4bf7066133a3f21b42761d856336c455d2a6f05dd8a8ed2e",
+    "package.json": "3705219441619d27b2865fef557b28e19c90a9ce1e1ab4c15bd6c5ef1601ee27",
+    "scripts/check-upstream.ts": "2ea328b99679854262e4a84b55402592a87b95624e04a165d5a1a226eb2ba610",
+    "scripts/worktree.ts": "48e1dfeb40c2acdc8e56bd39cacec74299e8387147d2e63f35a97ba6fdd44e28",
+    "src/launch-extension.ts": "938deaab1d55c3f186bc0f8f0d6bc00e28f7a6a1b9a19769febfc02b518786dd",
+    "src/preflight.ts": "7f571a22dbdc3e82f5d03f8db55fb7d7756ca8fd4ea3f4b675c1f34a9f8052c1",
+    "src/research.ts": "09b84960bcc47c22986d7f3104a15d3cd44c2a56275a18267b84ec6b77bd649f",
+    "src/review.ts": "6b459d63bdd28efac86475f63f479e2030aef8ac86dc0c1fb3cbc3203d39cd0a",
+    "src/roles.ts": "4298bf09ec1842645c51dbac1668a1055f5458b0fdda1fd0a0b7562015396b2c",
+    "src/skill-extension.ts": "1a1353108e4b5a017df3ceed4d6e2ab79887adaac77e6605c6e6acc05c5b615f",
+    "src/skills.ts": "3d722ebaabae71dba9a8a31bd689efa885cbccc439867566995363b9a8e39097",
+    "src/upstream.ts": "637643f6f8c783ffb533dd3cd6508f4c00087fcdad387b5e16074b0e0a2be278",
+    "src/worktree-extension.ts": "294021e010afcc82756bca6d8b2c72c057637679bf21de5837451530547d7411",
+    "src/worktrees.ts": "aecc92c1b426446bb6e4022d941eca54986d9f3dd5b8d9e1e700f6223f880f7f",
+    "test/fixtures/offline-web.ts": "e0c2566dff3eb5aa98127a41859fb4be23ea95436ede3fdd485e7e2c02c42404",
+    "test/fixtures/research-provider.ts": "b2fa20cd1fc5836cff19126088fa70e7349a42301a387ac5ab594ad9828c413e",
+    "test/fixtures/scripted-provider.ts": "9ed6dbd65e88817f932dc1ed0334de38c039a05e5546d0c853e7d6e9b1edb9eb",
+    "test/fixtures/worktree-provider.ts": "7f5adcdcd3ea5973938a9da825a7432d0700a6fa7263bf3faec2c15dd48a3749",
+    "test/helpers/pi.ts": "62b813fbb776580b70231d344c4ce0b93b876a38916ef26c0b097edc7bd93ddf",
+    "test/pi-integration.test.ts": "26fbe7ca393126b30c306641b319ef3cfab1b61f98f7aee2633dfb61e170838a",
+    "test/preflight.test.ts": "69c6289a9ac186cc06ca0fc0918672f884da6af92e21e5367bb785da84229662",
+    "test/research.test.ts": "301b31bb0405648166eef0d31ecd504fd2274a26053edb6758ae24d646544343",
+    "test/review.test.ts": "79a0570f7ecd9009205e585fcb160a076b1cb471e9b58e2ab59d222c727055da",
+    "test/skills.test.ts": "f871e63a2797cd0e120750357f6a481ef9b5c4f2b170d47520d2af6b19ca71f7",
+    "test/upstream.test.ts": "bc16d25fa0f7a9ec54a6b35df0981476884c2e52739a20032aba0af9dce1c3d7",
+    "test/worktree-integration.test.ts": "71bf79087cdfb00bc95833d4acb525764a42345ac5d1da78af5f57ee3850051f",
+    "test/worktrees.test.ts": "2f956ba53639583b0507d497416934bef7a403269b91c6089fa3a873f3800a0c",
+    "tsconfig.json": "2aa871202dd724ccc0083ca49cce19fcc753e204dd4927e655fd5440c489feea",
+    "upstream.lock.json": "090d1019386db6527f8f54c9d7ebd1fca0893fde0afd9e99ff51ddbd160a2aeb"
+  }
+}

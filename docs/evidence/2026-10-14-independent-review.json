@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "packageVersion": "0.1.0-alpha.3",
+  "sourceCommit": null,
+  "sourceIdentity": "sha256 snapshot of local uncommitted files",
+  "environment": {
+    "node": "26.10.0",
+    "typescript": "7.0.2",
+    "pi": "1.0.3",
+    "pi-subagents": "0.78.0"
+  },
+  "upstreamRevision": "49dd158d1076134a641b33efb035946536778336",
+  "requirements": [
+    "R4 implemented; real-model acceptance pending",
+    "R3/R8-R10 portions"
+  ],
+  "validation": {
+    "command": "MATT_UPSTREAM_CHECKOUT=/tmp/pi-matt-skills-audit npm run check",
+    "typecheck": "passed",
+    "tests": {
+      "passed": 35,
+      "failed": 0,
+      "skipped": 0,
+      "reviewTests": 13,
+      "provider": "scripted local; actual Pi parent and parallel foreground child sessions"
+    },
+    "upstream": "exact revision/content match; 27 published skills",
+    "packageDryRun": {
+      "status": "passed",
+      "version": "0.1.0-alpha.3",
+      "entryCount": 29,
+      "includes": "all six roles, extensions and src/review.ts"
+    }
+  },
+  "realModelWorkflowAcceptance": "pending",
+  "files": {
+    "README.md": "51ee6132bb2d169086117af5e04c188b20c000365d063aa91e284ce8c03d3da0",
+    "THIRD_PARTY_NOTICES.md": "6ea00eb12a70f49e0568cb908c39929697060534ea622fa339c32fdf84c51227",
+    "agents/merger.md": "24b0531c0927c2e295ebd1ae364b3a13c6ad2c1a03a6889f38197a58af703d76",
+    "agents/researcher.md": "1ecd2f956875d2cafb860cf67ff030bcd8220694dc8b3bfdae4ea282a2516e54",
+    "agents/scout.md": "d40bb5323325880ff2ac3538967fbaf4aa46408c4481a4c8ea8670fd1772bbc0",
+    "agents/spec-reviewer.md": "17a6bba56b48123cf8bb904e6f183d349c5d7f7a9860ab8435d60b5299e3f6cb",
+    "agents/standards-reviewer.md": "90172893b8fcced3dc63feadb4bfb7fd2f6e06ab3a7ba9ff8304c9f9cb9353a2",
+    "agents/worker.md": "b8e42553c38c889777b1c38f33df2d4d4afa2b570cb7784c028bd5b053eb864d",
+    "compatibility.json": "eb3594f32f4d6ccc076668a5f1bada11b7b654f3279aef60ed8aae2b7fb5a02b",
+    "docs/evidence/2026-10-14-independent-review-check.txt": "e6f14cfb6b484d4597ca5f9cc39882b5d86a3102b90837db6aa73f7b65f81e9d",
+    "docs/evidence/2026-10-14-independent-review.md": "c122f8aa3cb53660026ed1a2f8db4e3b55b19d6307bcceb20aa05b9e2c311252",
+    "docs/project-plan.md": "39991ca4d41dcbd431e62d927082eece104357057f9008d33f9eef32629c70d3",
+    "extensions/child.ts": "916190d070bc9c61cc03bdd0673f6c482f9a3b203808ce29c77855c04744cc4f",
+    "extensions/index.ts": "fc6c265c76f8372a654acdb660d5b03050509b3708b41497c7d86894e760f7bb",
+    "extensions/web.ts": "abf9f9575112fc4798a272136512a0afc27f2ce53592d4ef7053b2ea2b9f5767",
+    "package-lock.json": "25ff06890233553a212ed60cc65bd79f1f1e52328ff08566d68274978717f78c",
+    "package.json": "074408423e1b37cd12bffa0f68d011ffd1c0c67fe05a04217defd10e0cb33ed2",
+    "scripts/check-upstream.ts": "2ea328b99679854262e4a84b55402592a87b95624e04a165d5a1a226eb2ba610",
+    "src/launch-extension.ts": "ba6b288a5a78ac5f2778fd50d0c566db82e873cf5659c008edac107340a30035",
+    "src/preflight.ts": "aa685fddef0b93f1d4f27d236fd42221878cdf2e8f401ef5d17d1582478f55f4",
+    "src/review.ts": "6b459d63bdd28efac86475f63f479e2030aef8ac86dc0c1fb3cbc3203d39cd0a",
+    "src/roles.ts": "4298bf09ec1842645c51dbac1668a1055f5458b0fdda1fd0a0b7562015396b2c",
+    "src/skill-extension.ts": "bd8b80b1d042982c6e782d59d9a4998bfc7b9cf3ce9d5227c5f3c69b4e098274",
+    "src/skills.ts": "3d722ebaabae71dba9a8a31bd689efa885cbccc439867566995363b9a8e39097",
+    "src/upstream.ts": "637643f6f8c783ffb533dd3cd6508f4c00087fcdad387b5e16074b0e0a2be278",
+    "test/fixtures/scripted-provider.ts": "bb7c6bd76c23390ad7e0168bed1d3f96f64544d7e8ee56ab41aba2a80d802ee4",
+    "test/helpers/pi.ts": "42f432375078b4e71660610a357afdc1a97512ac67ab87790836b34f37cd4e66",
+    "test/pi-integration.test.ts": "26fbe7ca393126b30c306641b319ef3cfab1b61f98f7aee2633dfb61e170838a",
+    "test/preflight.test.ts": "261c8394b8e1d6593d77c3f5d25f1ee6a6e5f89dc9f08b2f16289f5686fe5395",
+    "test/review.test.ts": "79a0570f7ecd9009205e585fcb160a076b1cb471e9b58e2ab59d222c727055da",
+    "test/skills.test.ts": "f871e63a2797cd0e120750357f6a481ef9b5c4f2b170d47520d2af6b19ca71f7",
+    "test/upstream.test.ts": "bc16d25fa0f7a9ec54a6b35df0981476884c2e52739a20032aba0af9dce1c3d7",
+    "tsconfig.json": "2aa871202dd724ccc0083ca49cce19fcc753e204dd4927e655fd5440c489feea",
+    "upstream.lock.json": "090d1019386db6527f8f54c9d7ebd1fca0893fde0afd9e99ff51ddbd160a2aeb"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "pi": {
+    "version": "1.0.3",
+    "status": "deterministic-and-live-workflow-acceptance-passed"
+  },
+  "upstream": {
+    "repository": "https://github.com/mattpocock/skills",
+    "revision": "49dd158d1076134a641b33efb035946536778336",
+    "publishedSkills": 27
+  },
+  "workflowAcceptance": {
+    "grill-with-docs": "deterministic-adapters-and-small-live-chatgpt-scenario-passed",
+    "research": "deterministic-adapters-and-small-live-chatgpt-scenario-passed",
+    "code-review": "deterministic-adapters-and-small-live-chatgpt-scenario-passed",
+    "implement-spec": "deterministic-adapters-and-small-live-chatgpt-scenario-passed"
+  },
+  "runtime": {
+    "package": "pi-subagents",
+    "version": "0.78.0",
+    "status": "foreground-background-review-owned-worktrees-and-native-resume-tested"
+  },
+  "review": {
+    "workflow": "matt-compat.review",
+    "status": "deterministic-parallel-and-failure-checks-passed",
+    "scope": "committed-diff; foreground; session-bound prepared evidence; explicit missing-spec skip",
+    "realModelAcceptance": "passed: independent axes; missing required tests surfaced"
+  },
+  "webProvider": {
+    "package": "pi-web-access",
+    "version": "0.40.0",
+    "status": "child-registration-internal-address-policy-and-public-page-smoke-tested"
+  },
+  "research": {
+    "status": "detached-lifecycle-failure-path-parent-exit-and-public-page-smoke-tested-with-scripted-models",
+    "mode": "native-background; prepared unique output; completion annotation; parent-exit artifacts retained",
+    "realModelAcceptance": "passed: primary-source findings, parent work, native notification and path inspection",
+    "searchProviderAcceptance": "fetch_content verified; no blanket hosted-search backend claim"
+  },
+  "worktrees": {
+    "status": "dependent-background-workers-native-resume-integration-validation-cleanup-and-recovery-tested",
+    "allocation": "explicit Git worktrees; native automatic allocation disabled",
+    "workerMode": "foreground or native background; explicit async; durable exclusive owned lease",
+    "validation": "exact merged worker/integration heads and hashed check logs",
+    "cleanup": "reviewed expiring plan; apply revalidation; no force; branches retained",
+    "pending": []
+  },
+  "packageVersion": "0.1.1",
+  "liveAcceptance": {
+    "model": "openai-codex/gpt-6.1-sol",
+    "evidence": "docs/evidence/live",
+    "implementationFinalHead": "6c8c1f35aad432b6fe482ae6a4b0792bfd7bea0d",
+    "tracker": "local disposable JSON fixture; no external service exercised",
+    "scope": "Four small first-version scenarios; live models were not rerun for the 0.1.1 documentation refresh."
+  },
+  "knownLimits": [
+    "Only the four named workflows have live scenario acceptance; the 27-skill inventory is not 27 complete workflow tests.",
+    "Arbitrary custom workflow scripts and external commands are outside checked adapter dispatch.",
+    "Leaf roles do not authorize nested delegation.",
+    "Pending or unknown native process proof preserves leases and work; parent exit does not authorize automatic cleanup.",
+    "Provider credentials, hosted search services, and external tracker/PR integrations remain host configuration.",
+    "Native active-tool status does not prove external bridge projection; old saved sessions can preserve an inactive launcher and loader."
+  ],
+  "parentDispatch": {
+    "status": "registered-versus-active launcher checked; inactive launcher blocks preparation",
+    "activation": "native subagents_enable or eager startup; host exclusions preserved",
+    "evidence": "docs/evidence/2026-10-14-parent-dispatch.md",
+    "savedSessionRecovery": "pi --continue --exclude-tools subagents_enable, or native toolActivation:eager; verified with retained conversation history",
+    "settingsLocations": {
+      "models": "<Pi agent directory>/settings.json: subagents.agentOverrides",
+      "activation": "<Pi agent directory>/extensions/subagent/config.json: toolActivation"
+    }
+  },
+  "verification": {
+    "date": "2026-10-14",
+    "packageVersion": "0.1.1",
+    "command": "MATT_UPSTREAM_CHECKOUT=/tmp/pi-matt-skills-audit npm run check",
+    "total": 84,
+    "passed": 83,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "optional live public-page smoke not enabled",
+    "evidence": "docs/evidence/2026-10-14-current-regression-check.txt"
+  }
+}

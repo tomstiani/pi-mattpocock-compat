@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "311b7875-ecaf-458b-9410-00e2793098c3",
+  "receiptId": "90ed0d8b-7b23-456d-9dbd-0c71cb825948",
+  "receiptDigest": "53f85c475010b32de129ffc2ec644108be8d1fc633ab1cc7050195d304709db7",
+  "repo": "/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-implement-spec-1791977873159/repo",
+  "head": "6c8c1f35aad432b6fe482ae6a4b0792bfd7bea0d",
+  "integrationHead": "6c8c1f35aad432b6fe482ae6a4b0792bfd7bea0d",
+  "blockers": [],
+  "expiresAt": 1791980272995,
+  "phase": "complete"
+}

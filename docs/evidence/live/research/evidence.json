@@ -1,0 +1,91 @@
+{
+  "scenario": "research",
+  "ok": true,
+  "model": "openai-codex/gpt-6.1-sol",
+  "upstream": "49dd158d1076134a641b33efb035946536778336",
+  "head": "8980dea2d1e98e3c7f2a6cae3c7d171fbb8a72af",
+  "directory": "/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-research-1791977808862",
+  "rounds": 0,
+  "toolResults": [
+    {
+      "tool": "write",
+      "isError": false
+    },
+    {
+      "tool": "write",
+      "isError": false
+    },
+    {
+      "tool": "matt_research_prepare",
+      "isError": false
+    },
+    {
+      "tool": "subagents_enable",
+      "isError": false
+    },
+    {
+      "tool": "subagent",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    },
+    {
+      "tool": "read",
+      "isError": false
+    }
+  ],
+  "rawConversationSha256": "004c16416a3c8092c52dad7f4094775c3e9d3b7a30cb0575232b29f3d192cf13",
+  "nativeRuns": [
+    {
+      "runId": "51398d86-b2c3-44ec-a6e7-6fe4854936d0",
+      "toolCallId": "call_4637fc7cc2c14d9f94430dd09eb4d246|fc_02fe03b083d65e1e016acf695b09fc81918fed098c30877f0f",
+      "state": "complete",
+      "cwd": "/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-research-1791977808862/repo",
+      "sessionFile": "/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-live-research-1791977808862/agent/sessions/--private-var-folders-28-dlxptn895632pkzn_7g03z7c0000gn-T-matt-live-research-1791977808862-repo--/2026-10-14T11-36-49-235Z_01a13a33-6552-70dc-9ef3-55fd8127c84a/aed98055-d6dd-4919-846b-5f083b993512/run-0/session.jsonl",
+      "processTerminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "51398d86-b2c3-44ec-a6e7-6fe4854936d0",
+        "runnerProcessInstanceId": "3d6b50e0-de83-41bf-84d3-3dbdb76587b9",
+        "observedAt": 1791977958461,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "3d6b50e0-de83-41bf-84d3-3dbdb76587b9",
+            "closeObservedAt": 1791977958461,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "steps": [
+        {
+          "agent": "matt-compat.researcher",
+          "model": "openai-codex/gpt-6.1-sol",
+          "context": "fresh",
+          "skills": [
+            "research"
+          ],
+          "status": "complete",
+          "exitCode": 0,
+          "startedAt": 1791977827976,
+          "endedAt": 1791977958433,
+          "toolCount": 7,
+          "launchContractDigest": "627f7f93952bea7f2c08a6651b4ee6fdc7a55ca08594d3d6c27b519467663b9e"
+        }
+      ]
+    }
+  ],
+  "reports": [],
+  "finalMessages": [
+    "`package.json` configures `npm test` as `node --test`.\n\nResearch is running in the background; findings and citation checks are pending.",
+    "Research completed; I read the findings and checked citations to official Node.js documentation and ECMAScript specifications.\n\n`assert.strictEqual` uses `Object.is()`: `NaN` equals `NaN`, `+0` differs from `-0`, types aren’t coerced, and objects require identical references.\n\nFindings: `docs/research/node-assert-strict-equal-acccd7a6-dc9e-44df-88a6-51d5a160e3bd.md`\n\nConfigured test command: `npm test` → `node --test`.\n\nACCEPTANCE_COMPLETE"
+  ]
+}

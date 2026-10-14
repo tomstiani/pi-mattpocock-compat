@@ -1,0 +1,30 @@
+✖ preflight cannot report ready when native subagent is registered but hidden from the parent (1832.475667ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1997.046875
+
+✖ failing tests:
+
+test at test/preflight.test.ts:27:1
+✖ preflight cannot report ready when native subagent is registered but hidden from the parent (1832.475667ms)
+  AssertionError [ERR_ASSERTION]: {"ok":true,"role":"matt-compat.researcher","cwd":"/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-compat-pi-4UciQy","errors":[],"warnings":["No sessionRoot/sessionDir was supplied; exact child session paths require the Pi host session-root policy."],"missing":{"skills":[],"tools":[]},"contextFiles":["/private/var/folders/28/dlxptn895632pkzn_7g03z7c0000gn/T/matt-compat-pi-4UciQy/AGENTS.md"],"skills":["code-review","codebase-design","domain-modeling","grilling","research","tdd"],"tools":["read","write","Skill","web_search","fetch_content","get_search_content","source_check"],"parentDispatch":{"subagentRegistered":true,"subagentActive":false,"activationToolActive":true},"launchContractDigest":"0ed38244b1f8081ee416db5d1fa39b9fa00e6a2d8a8f9dfb45ed76e0a2a2e5ee"}
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///<repo>/test/preflight.test.ts:29:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
