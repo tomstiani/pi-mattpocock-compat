@@ -1,0 +1,39 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [22.19.0, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Install pinned upstream test inputs
+        shell: bash
+        run: |
+          git clone https://github.com/mattpocock/skills.git "$RUNNER_TEMP/mattpocock-skills"
+          git -C "$RUNNER_TEMP/mattpocock-skills" checkout 49dd158d1076134a641b33efb035946536778336
+      - name: Check upstream compatibility
+        run: npm run check:upstream -- "$RUNNER_TEMP/mattpocock-skills"
+      - name: Typecheck and test
+        env:
+          MATT_UPSTREAM_CHECKOUT: ${{ runner.temp }}/mattpocock-skills
+          GIT_CONFIG_NOSYSTEM: "1"
+          GIT_CONFIG_GLOBAL: /dev/null
+        run: npm run check
+      - name: Check package contents
+        run: npm pack --dry-run
